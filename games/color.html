@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Color Mixing</title>
+  </head>
+  <body>
+    <h2>Color Mixing Game</h2>
+
+    <button onclick="mix('red')">Red</button>
+    <button onclick="mix('blue')">Blue</button>
+    <button onclick="mix('yellow')">Yellow</button>
+
+    <p id="result"></p>
+
+    <script>
+      let selected = [];
+
+      function mix(color) {
+        selected.push(color);
+
+        if (selected.length === 2) {
+          let output =
+            selected.includes("red") && selected.includes("blue")
+              ? "Purple"
+              : selected.includes("red") && selected.includes("yellow")
+                ? "Orange"
+                : selected.includes("blue") && selected.includes("yellow")
+                  ? "Green"
+                  : "Unknown";
+
+          document.getElementById("result").innerText = "Result: " + output;
+          selected = [];
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #eefaf0;
+  position: relative;
+}
+
+/* Title fixed top-center */
+#appTitle {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Points top-right */
+#points {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Button to toggle description */
+#descBtn {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  background: #7dd87d;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* Container: slime center + description on right */
+.container {
+  display: flex;
+  justify-content: center; /* center the game area */
+  align-items: flex-start;
+  margin-top: 120px;
+  gap: 40px;
+}
+
+/* Game area: slimes + buttons */
+.game-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Slime area (two slimes) */
+.slime-area {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+/* Slimes */
+.slime {
+  width: 160px;
+  height: 120px;
+  background: radial-gradient(circle at top left, #ffffff66, #ff6f61);
+  border-radius: 60% 40% 55% 45% / 55% 60% 40% 45%;
+  animation: slimePulse 3s infinite ease-in-out;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,0.18));
+}
+
+@keyframes slimePulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08, 0.92); }
+  100% { transform: scale(1); }
+}
+
+.mix {
+  animation: slimeMix 0.6s ease-in-out;
+}
+
+@keyframes slimeMix {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.25, 0.75); }
+  100% { transform: scale(1); }
+}
+
+/* Color buttons */
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.options button {
+  background: #d5e760;
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Mix button */
+#mixBtn {
+  padding: 10px 22px;
+  border-radius: 25px;
+  border: none;
+  background: #17e55c;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 6px;
+}
+
+/* Description panel */
+#description {
+  width: 250px;
+  padding: 15px;
+  background: #edeaeacc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-size: 16px;
+  line-height: 1.5;
+  display: none; /* hidden by default */
+}
+
+/* Cat bottom-right */
+#catContainer {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+#cat {
+  width: 200px;
+  border-radius: 15px;
+}
+
+/* Cat bounce */
+.animate {
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* Confetti */
+#confetti {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  opacity: 0.8;
+  top: -10px;
+  animation: fall 1.5s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Solar System</title>
+    <link rel="stylesheet" href="games/solarstyle.css" />
+  </head>
+  <body>
+    <h1 class="title">Our Solar System</h1>
+    <p class="subtitle">Click a planet to learn one simple fact</p>
+
+    <div class="planet-grid" id="planetGrid"></div>
+    <!-- Play Games Button -->
+    <button id="playGamesBtn" style="display: none">Play Games</button>
+
+    <!-- Planet Info Modal -->
+    <div class="modal" id="planetModal" aria-hidden="true">
+      <div class="modal-content">
+        <h2 id="planetName"></h2>
+        <img id="planetImage" alt="" />
+        <p id="planetFact"></p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <script src="solarjs.js"></script>
+  </body>
+</html>

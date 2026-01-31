@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("..assets/planetassets/sky.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 36px;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.games-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background: #222222;
+  border-radius: 16px;
+  padding: 25px;
+  width: 260px;
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.game-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.game-card h2 {
+  margin-bottom: 10px;
+}
+
+.points {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffd36a;
+}
