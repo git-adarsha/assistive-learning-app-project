@@ -3,22 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <title>Solar Games</title>
-    <link rel="stylesheet" href="games/solargamesstyle.css" />
+
+    <!-- Correct: same folder CSS -->
+    <link rel="stylesheet" href="./solargamesstyle.css" />
   </head>
+
   <body>
     <h1 class="title">🌟 Solar Games 🌟</h1>
     <p class="subtitle">Choose a game and start scoring points!</p>
 
     <div class="games-container">
       <!-- Game 1 -->
-      <div class="game-card" onclick="location.href = 'match-the-planet.html'">
+      <div
+        class="game-card"
+        onclick="window.location.href = './match-the-planet.html'"
+      >
         <h2>Match the Planet</h2>
         <p>Match planets with their correct names.</p>
         <span class="points">⭐ Points: 10 per match</span>
       </div>
 
       <!-- Game 2 -->
-      <div class="game-card" onclick="location.href = 'arrange-planets.html'">
+      <div
+        class="game-card"
+        onclick="window.location.href = './arrange-planets.html'"
+      >
         <h2>Arrange the Planets</h2>
         <p>Arrange planets in the correct order from the Sun.</p>
         <span class="points">⭐ Points: 20 per correct order</span>
