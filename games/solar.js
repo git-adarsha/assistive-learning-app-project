@@ -1,42 +1,42 @@
 const planets = [
   {
     name: "Mercury",
-    image: "./planetassets/mercuryimg.jpg",
+    image: "../assets/mercuryimg.jpg",
     fact: "Mercury is the closest planet to the Sun.",
   },
   {
     name: "Venus",
-    image: "./planetassets/venusimg.jpg",
+    image: "../assets/venusimg.jpg",
     fact: "Venus is the hottest planet.",
   },
   {
     name: "Earth",
-    image: "./planetassets/earthimg.jpg",
+    image: "../assets/earthimg.jpg",
     fact: "Earth is the only planet with known life.",
   },
   {
     name: "Mars",
-    image: "./planetassets/marsimg.jpg",
+    image: "../assets/marsimg.jpg",
     fact: "Mars is called the red planet.",
   },
   {
     name: "Jupiter",
-    image: "./planetassets/jupiterimg.jpg",
+    image: "../assets/jupiterimg.jpg",
     fact: "Jupiter is the largest planet.",
   },
   {
     name: "Saturn",
-    image: "./planetassets/saturnimg.jpg",
+    image: "../assets/saturnimg.jpg",
     fact: "Saturn has large rings.",
   },
   {
     name: "Uranus",
-    image: "./planetassets/uranusimg.jpg",
+    image: "../assets/uranusimg.jpg",
     fact: "Uranus spins on its side.",
   },
   {
     name: "Neptune",
-    image: "./planetassets/neptuneimg.jpg",
+    image: "../assets/neptuneimg.jpg",
     fact: "Neptune is very cold and windy.",
   },
 ];
@@ -97,5 +97,5 @@ window.addEventListener("DOMContentLoaded", () => {
 // Click action for the button
 playBtn.addEventListener("click", () => {
   // Redirect to games page or do anything you like
-  window.location.href = "solargames.html"; // replace with your games URL
+  window.location.href = "./solargames.html"; // replace with your games URL
 });
