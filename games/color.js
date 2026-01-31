@@ -9,7 +9,7 @@ const mixRules = {
 };
 
 // Cat images
-const catImages = ["cat1.png", "cat2.png", "cat3.png", "cat4.png"];
+const catImages = ["../assets/cat1.png", "../assets/cat2.png", "../assets/cat3.png", "../assets/cat4.png"];
 
 let points = 0;
 let color1 = "";
