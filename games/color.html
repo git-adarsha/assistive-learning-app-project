@@ -1,37 +1,48 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
-    <title>Color Mixing</title>
+    <meta charset="UTF-8" />
+    <title>Color Mixing Game</title>
+
+    <!-- LINK CORRECT CSS FILE -->
+    <link rel="stylesheet" href="colorstyle.css" />
   </head>
   <body>
-    <h2>Color Mixing Game</h2>
+    <div id="appTitle">Color Mixing Game</div>
+    <div id="points">Points: 0</div>
 
-    <button onclick="mix('red')">Red</button>
-    <button onclick="mix('blue')">Blue</button>
-    <button onclick="mix('yellow')">Yellow</button>
+    <button id="descBtn" onclick="toggleDescription()">
+      Show Game Instructions
+    </button>
 
-    <p id="result"></p>
+    <div class="container">
+      <div class="game-area">
+        <div class="slime-area"></div>
 
-    <script>
-      let selected = [];
+        <div class="options">
+          <button onclick="guessColor('purple')">Purple</button>
+          <button onclick="guessColor('green')">Green</button>
+          <button onclick="guessColor('orange')">Orange</button>
+        </div>
 
-      function mix(color) {
-        selected.push(color);
+        <button id="mixBtn" onclick="mixSlime()">MIX</button>
 
-        if (selected.length === 2) {
-          let output =
-            selected.includes("red") && selected.includes("blue")
-              ? "Purple"
-              : selected.includes("red") && selected.includes("yellow")
-                ? "Orange"
-                : selected.includes("blue") && selected.includes("yellow")
-                  ? "Green"
-                  : "Unknown";
+        <p id="message"></p>
+      </div>
 
-          document.getElementById("result").innerText = "Result: " + output;
-          selected = [];
-        }
-      }
-    </script>
+      <div id="description">
+        Mix the two slimes and guess the resulting color correctly to earn
+        points!
+      </div>
+    </div>
+
+    <div id="catContainer">
+      <img id="cat" src="../assets/cat1.png" alt="cat" />
+    </div>
+
+    <div id="confetti"></div>
+
+    <!-- LINK CORRECT JS FILE -->
+    <script src="color.js"></script>
   </body>
 </html>
